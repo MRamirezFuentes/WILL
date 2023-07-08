@@ -10,10 +10,17 @@ function stringMasLarga(strings) {
   // Ej:
   // stringMasLarga(['hi', 'hello', 'ni hao', 'guten tag']); debe retornar 'guten tag'
   // stringMasLarga(['JavaScript', 'HTML', 'CSS']); debe retornar 'JavaScript'
-
   // Tu código aca
+  var mayor = "";
+
+  for (let i = 0; i < strings.length; i++) {
+    if (strings[i].length > mayor.length) {
+      mayor = strings[i];
+    }
+  }
+  return mayor;
 }
 
 // No modifiques nada debajo de esta linea //
 
-module.exports = stringMasLarga
+module.exports = stringMasLarga;
